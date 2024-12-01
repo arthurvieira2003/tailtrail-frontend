@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailTrail - Gerenciar Pets</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/pets.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header igual ao original -->
+    <header class="main-header">
+      <div class="logo">
+        <i class="fas fa-paw"></i>
+        <span>TailTrail</span>
+      </div>
+      <nav>
+        <a href="../index.html"><i class="fas fa-map-marker-alt"></i> Mapa</a>
+        <a href="#" class="active"><i class="fas fa-paw"></i> Pets</a>
+        <a href="alerts.html"><i class="fas fa-bell"></i> Alertas</a>
+      </nav>
+      <div class="user-menu">
+        <div class="notifications">
+          <i class="fas fa-bell"></i>
+          <span class="badge">3</span>
+        </div>
+        <div class="profile">
+          <div class="profile-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <span>Arthur Vieira</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container pets-container">
+      <div class="pets-grid">
+        <!-- Card de Adicionar Pet -->
+        <div class="pet-card add-pet">
+          <div class="add-pet-content">
+            <i class="fas fa-plus-circle"></i>
+            <h3>Adicionar Novo Pet</h3>
+          </div>
+        </div>
+
+        <!-- Cards dos Pets Existentes -->
+        <div class="pet-card">
+          <div class="pet-card-header">
+            <i class="fa-solid fa-dog" style="color: #4caf50"></i>
+            <div class="pet-status online"></div>
+          </div>
+          <div class="pet-card-body">
+            <h3>Rex</h3>
+            <p class="pet-breed">Golden Retriever</p>
+            <div class="pet-stats">
+              <div class="stat">
+                <i class="fas fa-birthday-cake"></i>
+                <span>2 anos</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-weight"></i>
+                <span>25 kg</span>
+              </div>
+            </div>
+          </div>
+          <div class="pet-card-footer">
+            <button class="btn-edit"><i class="fas fa-edit"></i> Editar</button>
+            <button class="btn-locate">
+              <i class="fas fa-map-marker-alt"></i> Localizar
+            </button>
+          </div>
+        </div>
+
+        <div class="pet-card">
+          <div class="pet-card-header">
+            <i class="fa-solid fa-cat" style="color: #ffa000"></i>
+            <div class="pet-status idle"></div>
+          </div>
+          <div class="pet-card-body">
+            <h3>Luna</h3>
+            <p class="pet-breed">Siamês</p>
+            <div class="pet-stats">
+              <div class="stat">
+                <i class="fas fa-birthday-cake"></i>
+                <span>1 ano</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-weight"></i>
+                <span>4 kg</span>
+              </div>
+            </div>
+          </div>
+          <div class="pet-card-footer">
+            <button class="btn-edit"><i class="fas fa-edit"></i> Editar</button>
+            <button class="btn-locate">
+              <i class="fas fa-map-marker-alt"></i> Localizar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/pets.js"></script>
+  </body>
+</html>

@@ -1,1 +1,0 @@
-# tailtrail-frontend

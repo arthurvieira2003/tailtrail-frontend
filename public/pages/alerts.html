@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailTrail - Alertas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/alerts.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <i class="fas fa-paw"></i>
+        <span>TailTrail</span>
+      </div>
+      <nav>
+        <a href="../index.html"><i class="fas fa-map-marker-alt"></i> Mapa</a>
+        <a href="pets.html"><i class="fas fa-paw"></i> Pets</a>
+        <a href="#" class="active"><i class="fas fa-bell"></i> Alertas</a>
+      </nav>
+      <div class="user-menu">
+        <div class="notifications">
+          <i class="fas fa-bell"></i>
+          <span class="badge">3</span>
+        </div>
+        <div class="profile">
+          <div class="profile-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <span>Arthur Vieira</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="alerts-container">
+      <div class="alerts-header">
+        <h1>Central de Alertas</h1>
+        <div class="alerts-filters">
+          <button class="filter-btn active">Todos</button>
+          <button class="filter-btn">Críticos</button>
+          <button class="filter-btn">Avisos</button>
+          <button class="filter-btn">Informações</button>
+        </div>
+      </div>
+
+      <div class="alerts-grid">
+        <!-- Alerta Crítico -->
+        <div class="alert-card critical animate__animated animate__fadeIn">
+          <div class="alert-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="alert-content">
+            <div class="alert-header">
+              <h3>Rex saiu da área segura</h3>
+              <span class="alert-time">Há 5 minutos</span>
+            </div>
+            <p>Seu pet está a mais de 100m do perímetro estabelecido.</p>
+            <div class="alert-actions">
+              <button class="btn-locate">
+                <i class="fas fa-map-marker-alt"></i> Localizar
+              </button>
+              <button class="btn-resolve">
+                <i class="fas fa-check"></i> Resolver
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alerta de Aviso -->
+        <div class="alert-card warning animate__animated animate__fadeIn">
+          <div class="alert-icon">
+            <i class="fas fa-exclamation-circle"></i>
+          </div>
+          <div class="alert-content">
+            <div class="alert-header">
+              <h3>Bateria do dispositivo baixa</h3>
+              <span class="alert-time">Há 30 minutos</span>
+            </div>
+            <p>O dispositivo de Luna está com menos de 20% de bateria.</p>
+            <div class="alert-actions">
+              <button class="btn-resolve">
+                <i class="fas fa-check"></i> Resolver
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alerta Informativo -->
+        <div class="alert-card info animate__animated animate__fadeIn">
+          <div class="alert-icon">
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="alert-content">
+            <div class="alert-header">
+              <h3>Relatório diário disponível</h3>
+              <span class="alert-time">Há 2 horas</span>
+            </div>
+            <p>
+              O resumo das atividades dos seus pets está pronto para
+              visualização.
+            </p>
+            <div class="alert-actions">
+              <button class="btn-view">
+                <i class="fas fa-chart-bar"></i> Visualizar
+              </button>
+              <button class="btn-resolve">
+                <i class="fas fa-check"></i> Resolver
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/alerts.js"></script>
+  </body>
+</html>

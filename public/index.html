@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailTrail - Monitoramento</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <i class="fas fa-paw"></i>
+        <span>TailTrail</span>
+      </div>
+      <nav>
+        <a href="#" class="active"
+          ><i class="fas fa-map-marker-alt"></i> Mapa</a
+        >
+        <a href="pages/pets.html"><i class="fas fa-paw"></i> Pets</a>
+        <a href="pages/alerts.html"><i class="fas fa-bell"></i> Alertas</a>
+      </nav>
+      <div class="user-menu">
+        <div class="notifications">
+          <i class="fas fa-bell"></i>
+          <span class="badge">3</span>
+        </div>
+        <div class="profile">
+          <div class="profile-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <span>Arthur Vieira</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <aside class="pets-sidebar">
+        <div class="pets-header">
+          <h2>Meus Pets</h2>
+          <button class="btn-add"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="pets-list">
+          <div class="pet-item active">
+            <div class="pet-icon">
+              <i
+                class="fa-solid fa-dog"
+                style="color: #4caf50; font-size: 32px"
+              ></i>
+            </div>
+            <div class="pet-info">
+              <h3>Rex</h3>
+              <p><i class="fas fa-circle online"></i> Ativo - Quintal</p>
+              <span class="last-update">Última atualização: 2min atrás</span>
+            </div>
+          </div>
+          <div class="pet-item">
+            <div class="pet-icon">
+              <i
+                class="fa-solid fa-cat"
+                style="color: #ffa000; font-size: 32px"
+              ></i>
+            </div>
+            <div class="pet-info">
+              <h3>Luna</h3>
+              <p><i class="fas fa-circle idle"></i> Dormindo - Quarto</p>
+              <span class="last-update">Última atualização: 15min atrás</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="map-container">
+        <div id="map"></div>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
