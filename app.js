@@ -1,24 +1,20 @@
 const express = require("express");
 const dotenv = require("dotenv");
 
-const initDatabase = require("./database/init");
-const userRoutes = require("./routes/user.routes");
-const petRoutes = require("./routes/pet.routes");
 const alertRoutes = require("./routes/alert.routes");
-const deviceRoutes = require("./routes/device.routes");
+const apiRoutes = require("./routes/api.routes");
 
 const app = express();
-const port = 3000;
+const port = 3443;
 
 dotenv.config();
 
-app.use("/users", userRoutes);
-app.use("/pets", petRoutes);
-app.use("/alerts", alertRoutes);
-app.use("/devices", deviceRoutes);
-async function startServer() {
-  await initDatabase();
+app.use(express.json());
 
+app.use("/alerts", alertRoutes);
+app.use("/api", apiRoutes);
+
+async function startServer() {
   app.use(express.static("public"));
 
   app.get("/", (req, res) => {

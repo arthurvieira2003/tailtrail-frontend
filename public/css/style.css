@@ -160,12 +160,13 @@ body {
 .custom-div-icon {
   background: none;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .custom-div-icon i {
-  display: block;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .pet-icon {
@@ -202,4 +203,41 @@ body {
 .profile-icon i {
   color: #666;
   font-size: 18px;
+}
+
+.alert-details {
+  text-align: left;
+  padding: 15px;
+  background-color: #fff3cd;
+  border-radius: 8px;
+  margin: 10px 0;
+  border: 1px solid #ffeeba;
+}
+
+.alert-details p {
+  margin: 8px 0;
+  color: #856404;
+  font-size: 14px;
+}
+
+.alert-details p strong {
+  color: #ff4444;
+  font-size: 16px;
+}
+
+.last-update {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.last-update i {
+  color: #4caf50;
+  margin-right: 5px;
 }
